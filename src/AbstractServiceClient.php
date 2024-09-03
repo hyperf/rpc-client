@@ -100,7 +100,7 @@ abstract class AbstractServiceClient
     protected function __generateRpcPath(string $methodName): string
     {
         if (! $this->serviceName) {
-            throw new InvalidArgumentException('Parameter $serviceName missing.');
+            throw new InvalidArgumentException("Parameter $serviceName missing.");
         }
         return $this->pathGenerator->generate($this->serviceName, $methodName);
     }
